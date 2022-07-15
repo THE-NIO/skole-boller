@@ -5,10 +5,13 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "prepare": "husky install"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "husky": "^8.0.1"
+  },
   "devDependencies": {
     "@nrwl/cli": "14.4.2",
     "@nrwl/nx-cloud": "latest",
