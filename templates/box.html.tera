@@ -1,0 +1,10 @@
+<div class="box">
+<details open="true">
+	<summary>
+		<a href="{% block href %}{% endblock href %}">{% block name %}{% endblock name %}</a>
+	</summary>
+	<span>
+		{% block content %}{% endblock content %}
+	</span>
+</details>
+</div>

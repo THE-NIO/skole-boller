@@ -1,0 +1,13 @@
+{% macro begin(href, name) %}
+<div class="tile">
+<details open="true">
+	<summary>
+		<a href="{{href}}">{{name}}</a>
+	</summary>
+	<span>
+{% endmacro begin %}
+{% macro end() %}
+	</span>
+</details>
+</div>
+{% endmacro end %}

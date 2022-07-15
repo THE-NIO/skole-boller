@@ -1,0 +1,3 @@
+{{ tile::begin(href="/remarks", name="Anmerkninger") }}
+{% include "components/remarks" %}
+{{ tile::end() }}

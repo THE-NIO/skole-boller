@@ -1,0 +1,3 @@
+{{ tile::begin(href="/calendar", name="Kalender") }}
+{% include "components/calendar" %}
+{{ tile::end() }}

@@ -1,17 +1,11 @@
+{% import "tiles/base" as tile %}
 {% extends "base" %}
 {% block title %}Index{% endblock title %}
 
 {% block content %}
 <h1>{{title}}</h1>
 
-<div class="box">
-<h2><a href="calendar">Kalender</a></h2>
-{% include "components/calendar" %}
-</div>
-
-<div class="box">
-<h2><a href="remarks">Anmerkninger</a></h2>
-{% include "components/remarks" %}
-</div>
+{% include "tiles/calendar" %}
+{% include "tiles/remarks" %}
 
 {% endblock content %}
