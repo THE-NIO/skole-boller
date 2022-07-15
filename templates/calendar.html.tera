@@ -1,0 +1,7 @@
+{% extends "base" %}
+{% block title %}Kalender{% endblock title %}
+
+{% block content %}
+<h1><a href="/calendar">Kalender</a></h1>
+{% include "components/calendar" %}
+{% endblock content %}

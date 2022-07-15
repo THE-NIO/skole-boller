@@ -1,0 +1,7 @@
+{% extends "base" %}
+{% block title %}Remarks{% endblock title %}
+
+{% block content %}
+<h1><a href="/remarks">Anmerkninger</a></h1>
+{% include "components/remarks" %}
+{% endblock content %}
