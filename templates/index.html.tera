@@ -5,7 +5,9 @@
 {% block content %}
 <h1>{{title}}</h1>
 
+<div class="flexbox">
 {% include "tiles/calendar" %}
 {% include "tiles/remarks" %}
+</div>
 
 {% endblock content %}
