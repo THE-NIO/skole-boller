@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate rocket;
 
+use rocket::fs::{relative, FileServer};
 use rocket_dyn_templates::{context, Template};
 
 fn get_classes() -> Vec<String> {
@@ -53,5 +54,6 @@ fn remarks() -> Template {
 fn rocket() -> _ {
     rocket::build()
         .mount("/", routes![index, calendar, remarks])
+        .mount("/", FileServer::from(relative!("static")))
         .attach(Template::fairing())
 }

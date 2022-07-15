@@ -4,9 +4,14 @@
 {% block content %}
 <h1>{{title}}</h1>
 
+<div class="box">
 <h2><a href="calendar">Kalender</a></h2>
 {% include "components/calendar" %}
+</div>
 
+<div class="box">
 <h2><a href="remarks">Anmerkninger</a></h2>
 {% include "components/remarks" %}
+</div>
+
 {% endblock content %}
