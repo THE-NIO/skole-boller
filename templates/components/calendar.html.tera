@@ -1,0 +1,5 @@
+<ul>
+{% for class in classes %}
+<li>{{class}}</li>
+{% endfor %}
+</ul>

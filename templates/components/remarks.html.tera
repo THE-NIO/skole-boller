@@ -1,0 +1,5 @@
+<ul>
+{% for remark in remarks %}
+<li>{{remark}}</li>
+{% endfor %}
+</ul>

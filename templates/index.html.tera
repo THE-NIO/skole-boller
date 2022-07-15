@@ -3,17 +3,10 @@
 
 {% block content %}
 <h1>{{title}}</h1>
+
 <h2>Kalender</h2>
-<ul>
-{% for class in classes %}
-<li>{{class}}</li>
-{% endfor %}
-</ul>
+{% include "components/calendar" %}
 
 <h2>Anmerkninger</h2>
-<ul>
-{% for remark in remarks %}
-<li>{{remark}}</li>
-{% endfor %}
-</ul>
+{% include "components/remarks" %}
 {% endblock content %}
