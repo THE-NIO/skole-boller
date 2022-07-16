@@ -10,6 +10,8 @@
   },
   "private": true,
   "dependencies": {
+    "@nxext/svelte": "^14.0.0",
+    "@nxrs/cargo": "^0.3.3",
     "husky": "^8.0.1"
   },
   "devDependencies": {
