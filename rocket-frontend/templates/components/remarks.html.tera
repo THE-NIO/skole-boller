@@ -1,6 +1,6 @@
 You have {{ remarks | length }} / 10 remarks.
 <ul>
 {% for remark in remarks %}
-<li>{{remark}}</li>
+<li>{{remark.reason}}</li>
 {% endfor %}
 </ul>

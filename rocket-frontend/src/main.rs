@@ -4,19 +4,7 @@ extern crate rocket;
 use rocket::fs::{relative, FileServer};
 use rocket_dyn_templates::{context, Template};
 
-fn get_classes() -> Vec<String> {
-    vec!["math", "science"]
-        .into_iter()
-        .map(ToString::to_string)
-        .collect()
-}
-
-fn get_remarks() -> Vec<String> {
-    vec!["programmering i norsk timen"]
-        .into_iter()
-        .map(ToString::to_string)
-        .collect()
-}
+use backend::Backend;
 
 #[get("/")]
 fn index() -> Template {
@@ -24,8 +12,8 @@ fn index() -> Template {
         "index",
         context! {
             title: "Skole boller",
-            classes: get_classes(),
-            remarks: get_remarks(),
+            classes: Backend::classes(),
+            remarks: Backend::remarks(),
         },
     )
 }
@@ -35,7 +23,7 @@ fn calendar() -> Template {
     Template::render(
         "calendar",
         context! {
-            classes: get_classes(),
+            classes: Backend::classes(),
         },
     )
 }
@@ -45,7 +33,7 @@ fn remarks() -> Template {
     Template::render(
         "remarks",
         context! {
-            remarks: get_remarks(),
+            remarks: Backend::remarks(),
         },
     )
 }
