@@ -27,3 +27,23 @@ NX is an orchestration and mono-repo tool designed for the purpose of managing l
     - `cargo build` &rarr; `nx run PROJECT-NAME:build`
     - `cargo check` &rarr; `nx run PROJECT-NAME:lint`
     - `npm run serve` &rarr; `nx run PROJECT-NAME:serve`
+
+## Pitfalls and common bugs
+
+### `"parserOptions.project" has been set for @typescript-eslint/parser` in svelte project with storybook configured.
+
+This means you have not resolved it in the linting stage. To fix this you will have to manually edit the `.eslintrc.js` file in the root of the project. Update its config to as follows
+
+```json
+...
+      parseroptions: {
+        project: ['libs/.../tsconfig.*?.json'],
+      },
+...
+// TO
+...
+      parserOptions: {
+        project: ['libs/.../tsconfig.*?.json', 'libs/.../.storybook/tsconfig.json'],
+      },
+...
+```
