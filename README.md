@@ -14,8 +14,9 @@ NX is an orchestration and mono-repo tool designed for the purpose of managing l
    - These generators can either be run using the NX VSC-EXT or using the nx cli. First ensure you have the NX cli available by running `nx`. If its not available install it globally using `npm i -g nx`.
    - The most common generators we will use:
      - Frontend
-       - `nx generate @nxext/svelte:lib --e2eTestRunner none --name PROJECT-NAME`
+       - `nx generate @nxext/svelte:lib --e2eTestRunner none --name PROJECT-NAME && nx generate @nxext/svelte:storybook-configuration --name PROJECT-NAME`
        - `nx generate @nxext/svelte:app --e2eTestRunner cypress --name PROJECT-NAME`
+       - `nx generate @nxext/component --name COMPONENT-NAME --project PROJECT-NAME`
      - Backend
        - `nx generate @nxrs/cargo:bin --name PROJECT-NAME`
        - `nx generate @nxrs/cargo:lib --name PROJECT-NAME`
