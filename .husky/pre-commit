@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+yarn prettier -w --no-error-on-unmatched-pattern  ./**/*.{json,ts,js}
 yarn nx affected --target=lint
 yarn nx affected --target=builbuild
