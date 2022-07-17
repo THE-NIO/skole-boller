@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "abscences": "libs/abscences",
     "echo_backend_example": "apps/echo-backend-example"
   }
 }
